@@ -18,9 +18,10 @@ resource "aws_instance" "web" {
  provisioner "remote-exec" {
    inline = [
      "sudo amazon-linux-extras install -y nginx1",
-     "sudo systemctl start nginx"
-     
-
+     "sudo systemctl start nginx",
+     "sudo yum install git",
+     "clone https://github.com/dharam123/hello-world.git"
+    
    ]
  }
 }
