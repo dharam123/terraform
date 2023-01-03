@@ -1,11 +1,9 @@
 provider "aws" {
-  region     = "us-west-2"
-  access_key = "YOUR-KEY"
-  secret_key = "YOUR-KEY"
+  region     = "us-east-1"
 }
 
 
-resource "aws_instance" "myec2" {
+resource "aws_instance" "web" {
    ami = "ami-0ca285d4c2cda3300"
    instance_type = "t2.micro"
    key_name = "terraform-key"
