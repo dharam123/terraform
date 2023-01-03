@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
    inline = [
      "sudo amazon-linux-extras install -y nginx1",
      "sudo systemctl start nginx"
-     "sudo cat <!DOCTYPE html> 
+     "echo cat <!DOCTYPE html> 
 <html> 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
