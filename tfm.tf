@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
    inline = [
      "sudo amazon-linux-extras install -y nginx1",
      "sudo systemctl start nginx",
-     "sudo yum install git",
+     "sudo yum install -y git",
      "clone https://github.com/dharam123/hello-world.git"
     
    ]
