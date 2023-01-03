@@ -18,11 +18,8 @@ resource "aws_instance" "web" {
  provisioner "remote-exec" {
    inline = [
      "sudo amazon-linux-extras install -y nginx1",
-     "sudo systemctl start nginx",
-     "echo '<h1><center> Welcome to TGS </center</h1>' > index.html",
-"sudo mv index.html  /usr/share/nginx/html/"
-
- 
+     "sudo systemctl start nginx"
+     
 
    ]
  }
