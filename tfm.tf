@@ -21,11 +21,10 @@ resource "aws_instance" "web" {
      "sudo systemctl start nginx",
      "sudo yum install -y git",
      "git clone https://github.com/dharam123/hello-world.git",
-     "cd /usr/share/nginx/html",
-     "sudo cp index.jsp index.html",
-     "sudo systemctl restart nginx"
+     "sudo mv index.jsp /usr/share/nginx/html/",
+     "cd /usr/share/nginx/html/",
+     "sudo cp index.jsp index.html"
    
-    
    ]
  }
 }
